@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="header">
+      <a href="#" class="logo">Ally</a>
+
+      <nav class="navbar">
+          <a href="/" class="active">Home</a>
+          <a href="/about">About</a>
+          <a href="/projects">Projects</a>
+          <a href="/contact">Contact</a>
+      </nav>
+</header>
+
+<section class="home">
+<div class="container">
+    <div class="card" data-tilt>
+        <img src="../static/images/profilesized.png">
+        <h2>Ally Baubooa</h2>
+        <p>I'm a Full Stack Developer and Coding is Life. </p>
+        <div class="links">
+            <a href="https://www.facebook.com/allyhussein.baubooa"><img src="../static/images/facebook.png"></a>
+            <a href="https://twitter.com/ally_wizzyboo"><img src="../static/images/twitter.png"></a>
+            <a href="https://github.com/allybaubooa"><img src="../static/images/github-logo.png"></a>
+        </div>
+        <div class="btn-box">
+            <a href="#">Contact Me</a>
+        </div>
+    </div>
+</div>
+</section>
+<script src="../static/vanilla-tilt.js"></script>
+</body>
+</html>
