@@ -277,10 +277,10 @@ body{
   .container{
     height: 100%;
     gap: 100px 50px;
-    padding: 170px 50px 70px;
+    padding: 200px 50px 70px;
   }
 
   .container .card1:hover{
-  height: 300px;
+  height: 355px;
 }
 }
