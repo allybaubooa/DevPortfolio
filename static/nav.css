@@ -3,63 +3,177 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10%;
   background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  height: 80px;
 }
 
 
-.animated-logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/*.animated-logo{*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*.letter {*/
+/*  font-size: 30px;*/
+/*  text-decoration: none;*/
+/*  font-weight: 600;*/
+/*  transition: 0.4s;*/
+/*  transform: translateX(0);*/
+/*  cursor: default;*/
+/*  color: #fff;*/
+/*}*/
+
+/*.letter:hover {*/
+/*  transform: translatey(-1rem);*/
+/*  background: -webkit-linear-gradient(120deg, hsl(223, 86%, 54%), hsl(223, 86%, 54%));*/
+/*  -webkit-background-clip: text;*/
+/*  -webkit-text-fill-color: transparent;*/
+/*}*/
+
+/*.list{*/
+/*  list-style: none;*/
+/*  display: flex;*/
+/*  gap: 25px;*/
+/*}*/
+
+/*#toggler,.navbar label{*/
+/*  display: none;*/
+/*}*/
+
+/*@media screen {*/
+
+/*}*/
+
+/*.navbar a {*/
+/*  font-size: 20px;*/
+/*  color: #ededed;*/
+/*  text-decoration: none;*/
+/*  font-weight: 550;*/
+/*  margin-left: 35px;*/
+/*}*/
+
+/*.navbar a:hover{*/
+/*  color: #891446;*/
+/*}*/
+
+/*.navbar a.active{*/
+/*}*/
+
+:root {
+  --blue : #12d2db;
+  --white : #fcf2fa;
+  --purple : #912a7eaa;
+  --purple-blc : #230622dd;
+  --shadow : 0 5px 10px 5px rgba(0, 0, 0, .3);
+  --navColor : linear-gradient(to right, rgba(178, 47, 147, .6)5%, rgba(35, 6, 34, .9));
 }
 
-.letter {
+nav {
+  position: absolute;
+  background: var(--navColor);
+  box-shadow: var(--shadow);
+  height: 80px;
+  width: 100%;
+}
+label.logo {
+  color: var(--white);
   font-size: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.4s;
-  transform: translateX(0);
-  cursor: default;
-  color: #fff;
+  line-height: 80px;
+  padding: 0 80px;
+  letter-spacing: -1px;
+  font-weight: 800;
+  font-style: italic;
+  transition: .2s ease;
+  text-shadow: 3px 5px 20px #230622aa;
 }
-
-.letter:hover {
-  transform: translatey(-1rem);
-  background: -webkit-linear-gradient(120deg, hsl(223, 86%, 54%), hsl(223, 86%, 54%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+nav ul {
+  float: right;
+  margin-right: 80px;
 }
-
-.list{
-  list-style: none;
-  display: flex;
-  gap: 25px;
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
 }
-
-#toggler,.navbar label{
+nav ul li a {
+  color: var(--white);
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 13px;
+  text-transform: lowercase;
+}
+a.active, a:hover {
+  background: var(--purple);
+  transition: .5s;
+}
+.checkbtn {
+  line-height: 80px;
+  font-size: 30px;
+  float: right;
+  cursor: pointer;
+  margin-right: 40px;
+  display: none;
+}
+.checkbtn i {
+  color: var(--white);
+  padding: 5px;
+  border-radius: 10px;
+  transition: .5s ease;
+}
+.checkbtn i:hover {
+  background: var(--purple);
+}
+#check {
   display: none;
 }
 
-@media screen {
-
+/* responsove code */
+@media (max-width: 952px) {
+  /* table mode */
+  label.logo {
+    font-size: 25px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
 }
 
-.navbar a {
-  font-size: 20px;
-  color: #ededed;
-  text-decoration: none;
-  font-weight: 550;
-  margin-left: 35px;
-}
-
-.navbar a:hover{
-  color: #891446;
-}
-
-.navbar a.active{
+@media (max-width: 858px) {
+  /* mobile mode */
+  .checkbtn {
+    display: block;
+  }
+   ul {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: var(--purple-blc);
+    top: 80px;
+    left: -100%;
+    padding-top: 80px;
+    text-align: center;
+    transition: .5s ease;
+  }
+  nav ul li {
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+  }
+  a.active, a:hover {
+    background: none;
+    color: var(--blue);
+    text-shadow: 0 10px 15px var(--blue);
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
 }

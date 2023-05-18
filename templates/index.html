@@ -7,31 +7,47 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='education.css') }}">
+    <script src="https://kit.fontawesome.com/89c1e40751.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="header">
 <!--      <a href="#" class="logo">My Portfolio</a>-->
-    <div class="animated-logo">
-        <div class="letter">M</div>
-        <div class="letter">Y</div>
-        <div class="letter">P</div>
-        <div class="letter">O</div>
-        <div class="letter">R</div>
-        <div class="letter">T</div>
-        <div class="letter">F</div>
-        <div class="letter">O</div>
-        <div class="letter">L</div>
-        <div class="letter">I</div>
-        <div class="letter">O</div>
-    </div>
+<!--    <div class="animated-logo">-->
+<!--        <div class="letter">M</div>-->
+<!--        <div class="letter">Y</div>-->
+<!--        <div class="letter">P</div>-->
+<!--        <div class="letter">O</div>-->
+<!--        <div class="letter">R</div>-->
+<!--        <div class="letter">T</div>-->
+<!--        <div class="letter">F</div>-->
+<!--        <div class="letter">O</div>-->
+<!--        <div class="letter">L</div>-->
+<!--        <div class="letter">I</div>-->
+<!--        <div class="letter">O</div>-->
+<!--    </div>-->
 
-      <nav class="navbar">
-          <a href="#home" class="active">Home</a>
-          <a href="#about">About</a>
-          <a href="#education">Education</a>
-          <a href="/projects">Projects</a>
-          <a href="/contact">Contact</a>
-      </nav>
+<!--      <nav class="navbar">-->
+<!--          <a href="#home" class="active">Home</a>-->
+<!--          <a href="#about">About</a>-->
+<!--          <a href="#education">Education</a>-->
+<!--          <a href="/projects">Projects</a>-->
+<!--          <a href="/contact">Contact</a>-->
+<!--      </nav>-->
+
+    <nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fa-solid fa-bars"></i>
+  </label>
+  <label class="logo">MyPortfolio.</label>
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#">Education</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 </header>
 
 <section class="home" id="home">
