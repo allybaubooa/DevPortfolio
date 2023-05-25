@@ -24,7 +24,7 @@
 
 .about-main{
   width: 100%;
-  height: auto;
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -45,59 +45,6 @@
     color: #f9004c;
     font-size: 40px;
 }
-
-/*.wrapper{*/
-/*    display: inline-flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.wrapper .static-txt{*/
-/*    color: #fff;*/
-/*    font-size: 40px;*/
-/*    font-weight: 400;*/
-/*}*/
-
-/*.wrapper .dynamic-texts{*/
-/*    margin-left: 15px;*/
-/*    height: 90px;*/
-/*    line-height: 90px;*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*.dynamic-texts li{*/
-/*    color: #f9004c;*/
-/*    list-style: none;*/
-/*    font-size: 40px;*/
-/*    font-weight: 500;*/
-/*    position: relative;*/
-/*    top: 0;*/
-/*    animation: slide 6s steps(4) infinite;*/
-/*}*/
-/*@keyframes slide {*/
-/*    100%{*/
-/*        top: -360px;*/
-/*    }*/
-/*}*/
-
-/*.dynamic-texts li span{*/
-/*    position: relative;*/
-/*}*/
-/*.dynamic-texts li span::after{*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    height: 150%;*/
-/*    width: 100%;*/
-/*    background: linear-gradient(45deg, #000000, #062A79) no-repeat fixed;*/
-/*    border-left: 2px solid #f9004c;*/
-/*    animation: typing 1.5s steps(10) infinite;*/
-/*}*/
-/*@keyframes typing {*/
-/*    100%{*/
-/*        left: 100%;*/
-/*        margin: 0 -35px 0 35px;*/
-/*    }*/
-/*}*/
 
 .about-text p{
     color: #fcfc;
@@ -146,5 +93,6 @@ button:hover{
 @media (max-width: 1120px){
     .about-main{
         gap: 20px 50px;
+        height: auto;
     }
 }
